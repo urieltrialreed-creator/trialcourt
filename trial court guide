@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Trial Courts Reference Guide</title>
+<style>
+:root {
+  --navy:#0f2747; --blue:#2f6fed; --blue-dark:#1f56c2; --blue-soft:#edf3ff;
+  --bg:#f4f7fb; --card:#fff; --text:#1d2939; --muted:#667085; --line:#e4e9f1;
+  --green:#16845b; --green-soft:#eaf8f1; --red:#c53f4f; --red-soft:#fff0f2;
+  --shadow:0 18px 50px rgba(15,39,71,.10);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#eef4ff 0,#f6f8fc 300px)}
+button,select,input{font:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1500px;margin:auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:12px} .logo{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;font-weight:800}
+.brand-title{font-weight:800} .brand-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.hero{max-width:1500px;margin:auto;padding:44px 24px 20px}
+.hero-card{border-radius:28px;padding:38px;color:#fff;background:linear-gradient(135deg,var(--navy),#174780 58%,var(--blue));box-shadow:var(--shadow)}
+.hero h1{font-size:40px;margin:0 0 12px} .hero p{margin:0;max-width:780px;line-height:1.7;color:rgba(255,255,255,.84)}
+.main{max-width:1500px;margin:auto;padding:10px 24px 48px}
+.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.panel{padding:22px}
+.filters{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end}
+.field label{display:block;margin-bottom:8px;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+select,input{width:100%;height:48px;border:1px solid #d7deea;border-radius:13px;padding:0 14px;outline:none;background:#fff}
+select:focus,input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(47,111,237,.11)}
+.primary,.secondary{height:48px;border:0;border-radius:13px;padding:0 18px;font-weight:800;cursor:pointer}
+.primary{color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-dark));box-shadow:0 10px 24px rgba(47,111,237,.24)}
+.secondary{color:var(--navy);background:#eef3f9}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.notice{margin-top:16px;padding:12px 14px;border-radius:12px;background:#fff8e6;color:#805b00;font-size:12px;line-height:1.5}
+.selection{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:30px 0 16px}
+.selection h2{margin:0;font-size:30px} .selection p{margin:6px 0 0;color:var(--muted)}
+.badge{padding:9px 13px;border-radius:999px;background:var(--blue-soft);color:var(--blue-dark);font-size:12px;font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.card{padding:28px;min-width:0;overflow:hidden} .card h3{margin:0 0 18px;display:flex;align-items:center;gap:12px;font-size:22px;line-height:1.3}
+.icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:900}
+.included .icon{color:var(--green);background:var(--green-soft)} .excluded .icon{color:var(--red);background:var(--red-soft)}
+.card-body{min-height:520px;height:auto;max-height:none;overflow:visible;padding:22px;border:1px solid var(--line);border-radius:16px;background:#fafbfd;line-height:1.7;min-width:0;overflow-wrap:anywhere;word-break:normal}
+.card-body ul{margin:0;padding:0;list-style:none;min-width:0}.card-body li{margin:0 0 16px;min-width:0}.rule-result{padding:20px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 5px 16px rgba(15,39,71,.05);min-width:0;overflow:hidden}.rule-title{font-size:18px;font-weight:800;color:var(--navy);line-height:1.5;overflow-wrap:anywhere;word-break:normal}.rule-row{display:grid;grid-template-columns:minmax(130px,165px) minmax(0,1fr);gap:12px;margin-top:12px;font-size:14px;line-height:1.65;align-items:start;min-width:0}.rule-row>div{min-width:0;overflow-wrap:anywhere;word-break:normal;white-space:normal}.rule-label{font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-size:11px;line-height:1.45}.decision-collect{color:var(--green);font-weight:900}.decision-review{color:#9a6700;font-weight:900}.decision-no{color:var(--red);font-weight:900}.rule-meta{display:block;font-size:13px;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}.review{color:#9a6700;font-weight:800}.data-tools{margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:16px;background:#fbfcfe}.data-tools summary{cursor:pointer;font-weight:800;color:var(--navy)}.data-tools textarea{width:100%;min-height:180px;margin-top:12px;padding:12px;border:1px solid #d7deea;border-radius:12px;font-family:Consolas,monospace;font-size:12px}.data-tools .hint{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0}
+.guidelines{margin-top:18px} .guidelines .icon{color:var(--blue);background:var(--blue-soft)}
+.empty{color:var(--muted);font-style:italic}
+.summary-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px}.summary-chip{padding:13px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center}.summary-chip strong{display:block;font-size:20px;color:var(--navy)}.summary-chip span{font-size:11px;color:var(--muted);font-weight:700}@media(max-width:720px){.summary-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:1200px){.cards{grid-template-columns:1fr}.card-body{min-height:360px}}
+@media(max-width:960px){.filters{grid-template-columns:1fr 1fr}.search-cell{grid-column:span 2}.search-cell button{width:100%}}
+@media(max-width:720px){.rule-row{grid-template-columns:1fr;gap:4px}.rule-label{margin-top:4px}.card{padding:18px}.card-body{padding:14px}.rule-result{padding:16px}.hero h1{font-size:30px}.hero-card{padding:26px}.filters,.cards{grid-template-columns:1fr}.search-cell{grid-column:auto}.selection{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner">
+  <div class="brand"><div class="logo">TC</div><div><div class="brand-title">Trial Court Guidelines</div><div class="brand-sub">US Court Reference Guide</div></div></div>
+</div></div>
+
+<section class="hero"><div class="hero-card">
+  <h1>Trial Court Document Collection Reference</h1>
+  <p>Enter a document title to receive a clear collection determination. Each result identifies the complete document title, whether the document should be collected, reviewed, excluded, or not collected, its document category, and any available state or county limitation.</p>
+</div></section>
+
+<main class="main">
+<section class="panel">
+  <div class="filters">
+    <div class="field"><label>STATE</label><select id="state"></select></div>
+    <div class="field"><label>COURT / COUNTY</label><select id="court"></select></div>
+    <div class="field"><label>DIRECT DOCUMENT TITLE SEARCH</label><input id="quickSearch" placeholder="Example: Motion to Compel, Complaint, Summons, Preliminary Objections"></div>
+    <div class="search-cell"><button class="primary" id="searchBtn">Search</button></div>
+  </div>
+  <div class="actions">
+    <button class="secondary" id="copyLink">Copy selected link</button>
+    <button class="secondary" id="reset">Reset</button>
+  </div>
+  <div class="notice"><strong>Collection reference:</strong> results use only the specific Pennsylvania, Michigan, and Ohio include/exclude title guidance provided for this tool. Titles not listed should be reviewed before collection.</div>
+  <details class="data-tools" style="display:none"><summary>Manage old reference data</summary><p class="hint">Paste additional rows in repeating 3-line format: Document Title, Collect/No/Collect-Review, Category. Imported rows are saved in this browser.</p><textarea id="ruleImport" placeholder="Complaint\nCollect\nPleading\nSummons\nNo\nAdmin"></textarea><div class="actions"><button class="primary" id="importRules">Import rows</button><button class="secondary" id="clearImported">Clear imported rows</button></div></details>
+</section>
+<div class="summary-grid"><div class="summary-chip"><strong>11</strong><span>PA Counties</span></div><div class="summary-chip"><strong>5</strong><span>OH Counties</span></div><div class="summary-chip"><strong>13</strong><span>MI County Entries</span></div></div>
+
+<section class="selection">
+  <div><h2 id="courtTitle">Select a court</h2><p id="stateLabel">Choose a state and court, then click Search.</p></div>
+  <div class="badge" id="category">Reference Guide</div>
+</section>
+
+<section class="cards">
+  <article class="card included"><h3><span class="icon">✓</span>Documents Approved for Collection or Requiring Review</h3><div id="included" class="card-body empty">Enter a document title to display documents approved for collection or requiring review.</div></article>
+  <article class="card excluded"><h3><span class="icon">×</span>Documents Not Approved for Collection or Specifically Excluded</h3><div id="excluded" class="card-body empty">Enter a document title to display documents that should not be collected or are specifically excluded.</div></article>
+</section>
+
+<section class="card guidelines"><h3><span class="icon">i</span>Starter Collection Guidelines</h3><div id="guidelines" class="card-body empty">Search for a court to display starter guidelines.</div></section>
+</main>
+
+<script>
+const records = [
+  {"Court":"Van Buren","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Jackson","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Michigan County*","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Kalamazoo","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Ottawa","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Wayne","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Ingham","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Kent","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Macomb","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Livingston","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"St. Clair","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Muskegon","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Genesee","State":"Michigan","TrialCourt":"Circuit Court"},
+  {"Court":"Butler","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Centre","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Clearfield","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Dauphin","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Delaware","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Greene","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Lackawanna","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Lebanon","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Lycoming","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"York","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Monroe","State":"Pennsylvania","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Butler","State":"Ohio","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Cuyahoga","State":"Ohio","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Fairfield","State":"Ohio","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Franklin","State":"Ohio","TrialCourt":"Court of Common Pleas"},
+  {"Court":"Warren","State":"Ohio","TrialCourt":"Court of Common Pleas"}
+];
+const templates = {
+  "Pennsylvania": {
+    "include": [
+      "BRIEF — Brief", "BRIEF — Brief of Appellee", "BRIEF — Objectors Brief",
+      "MOTION — Motion for Summary Judgment", "MOTION — Motion for Default Judgment", "MOTION — Motion",
+      "MOTION — Preliminary Objection", "MOTION — Motion for Judgment", "MOTION — Brief in Opposition to Motion",
+      "MOTION — Memorandum of Law", "MOTION — Brief in Support of Motion", "MOTION — Quash",
+      "MOTION — Motion to Strike", "MOTION — Motion to Dismiss", "MOTION — Motion to Reform",
+      "MOTION — Motion to Reassess", "MOTION — Motion for Leave", "MOTION — Leave",
+      "MOTION — Consent Motion", "MOTION — Motion to Rule in Favor", "MOTION — Motion in Limine",
+      "MOTION — Motion to Compel", "MOTION — Reconsideration", "MOTION — Supplemental",
+      "MOTION — Reinstate", "MOTION — Motion to Consolidate", "MOTION — Petition to Motion",
+      "MOTION — Motion to Remove", "MOTION — Motion to Vacate", "MOTION — Vacate", "MOTION — Set Aside",
+      "ORDER — Order", "ORDER — Opinion and Order",
+      "PLEADING — Answer", "PLEADING — Amended", "PLEADING — Complaint", "PLEADING — Answer and New Matter",
+      "PLEADING — Answer to Petition", "PLEADING — Answer to Preliminary Objection", "PLEADING — Counterclaim",
+      "PLEADING — Crossclaim", "PLEADING — Reply to Counterclaim or Crossclaim",
+      "PLEADING — Reply to Preliminary Objection", "PLEADING — Petition", "PLEADING — Reply to New Matter",
+      "PLEADING — Reply or Response"
+    ],
+    "exclude": [
+      "EXCLUDE — Automobile", "EXCLUDE — Affidavit", "EXCLUDE — Amend", "EXCLUDE — Notice",
+      "EXCLUDE — Appeal", "EXCLUDE — Administrative", "EXCLUDE — Landlord Tenant", "EXCLUDE — Stay"
+    ],
+    "guidelines": [
+      "Use only the Pennsylvania include and exclude titles shown in this guide.",
+      "Confirm that the document was filed in the selected Pennsylvania Court of Common Pleas.",
+      "Classify the document as Brief, Motion, Order, or Pleading using the listed title guidance.",
+      "Any title not listed should be reviewed before collection."
+    ]
+  },
+  "Michigan": {
+    "include": [
+      "ORDER — Opinion and Order — Include only when filed in a Michigan Circuit Court, any county.",
+      "ORDER — Opinion — Include only when filed in a Michigan Circuit Court, any county."
+    ],
+    "exclude": [
+      "EXCLUDE — Business Docket Court", "EXCLUDE — Oakland Court", "EXCLUDE — Claims", "EXCLUDE — Court of Appeals"
+    ],
+    "guidelines": [
+      "Michigan collection is limited to Opinion and Opinion and Order documents.",
+      "The document must be filed in a Michigan Circuit Court, regardless of county.",
+      "Do not collect documents from Business Docket Court, Oakland Court, Claims, or Court of Appeals.",
+      "No Michigan Brief, Motion, or Pleading titles are approved by this specific guidance."
+    ]
+  },
+  "Ohio": {
+    "include": [
+      "BRIEF — Pretrial Statement or Pretrial Response", "BRIEF — Trial Brief",
+      "MOTION — Motion for Temporary Restraining Order", "MOTION — Motion for Summary Judgment",
+      "MOTION — Motion for Default Judgment", "MOTION — Motion", "MOTION — Motion to Compel",
+      "MOTION — Motion to Vacate", "MOTION — Motion to Vacate Judgment",
+      "MOTION — Reply Memorandum Contra Motion to Dismiss", "MOTION — Motion to Dismiss",
+      "MOTION — Motion for Dismissal", "MOTION — Response to Motion",
+      "MOTION — Reply or Response in Opposition to Motion", "MOTION — Reply or Response in Support of Motion",
+      "MOTION — Motion for Protective Order", "MOTION — Motion for Relief from Judgment",
+      "MOTION — Motion to Reactivate", "MOTION — Motion to Intervene", "MOTION — Motion to Disqualify",
+      "ORDER — Order", "ORDER — Order Judgment", "ORDER — Order Agreed Judgment",
+      "ORDER — Agreed Entry or Agreed Judgment", "ORDER — Default Judgment", "ORDER — Summary Judgment",
+      "ORDER — Consent Judgment", "ORDER — Order Dismissal", "ORDER — Judgment",
+      "ORDER — Vacate Judgment", "ORDER — Relief from Judgment", "ORDER — Journal Entry",
+      "PLEADING — Complaint", "PLEADING — Amended Complaint", "PLEADING — Answer",
+      "PLEADING — Crossclaim and Counterclaim", "PLEADING — Reply",
+      "PLEADING — Verified Complaint or Verified Petition"
+    ],
+    "exclude": [
+      "EXCLUDE — Automobile", "EXCLUDE — Affidavit", "EXCLUDE — Amend", "EXCLUDE — Notice",
+      "EXCLUDE — Appeal", "EXCLUDE — Stay", "EXCLUDE — Stipulation", "EXCLUDE — Replevin"
+    ],
+    "guidelines": [
+      "Use only the Ohio include and exclude titles shown in this guide.",
+      "For judgment documents granted or signed by the judge, use an Order title for uniform classification.",
+      "Examples include Order Judgment, Order Agreed Judgment, and Order Dismissal.",
+      "Any title not listed should be reviewed before collection."
+    ]
+  }
+};
+
+const referenceRules = [
+  // Pennsylvania
+  {title:"Brief",status:"Collect",category:"Brief",state:"Pennsylvania"},
+  {title:"Brief of Appellee",status:"Collect",category:"Brief",state:"Pennsylvania"},
+  {title:"Objectors Brief",status:"Collect",category:"Brief",state:"Pennsylvania"},
+  {title:"Motion for Summary Judgment",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion for Default Judgment",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Preliminary Objection",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion for Judgment",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Brief in Opposition to Motion",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Memorandum of Law",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Brief in Support of Motion",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Quash",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Quash",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Strike",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Dismiss",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Reform",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Reassess",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion for Leave",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Leave",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Consent Motion",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Rule in Favor",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion in Limine",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Compel",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Reconsideration",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion for Reconsideration",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Supplemental",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Reinstate",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Reinstate",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Consolidate",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Petition to Motion",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Remove",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Motion to Vacate",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Vacate",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Set Aside",status:"Collect",category:"Motion",state:"Pennsylvania"},
+  {title:"Order",status:"Collect",category:"Order",state:"Pennsylvania"},
+  {title:"Opinion and Order",status:"Collect",category:"Order",state:"Pennsylvania"},
+  {title:"Opinion & Order",status:"Collect",category:"Order",state:"Pennsylvania"},
+  {title:"Answer",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Amended",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Complaint",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Answer New Matter",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Answer and New Matter",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Answer to Petition",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Answer Preliminary Objection",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Answer to Preliminary Objection",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Counterclaim",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Crossclaim",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Reply to Counterclaim or Crossclaim",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Reply to Preliminary Objection",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Petition",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Reply to New Matter",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Reply or Response",status:"Collect",category:"Pleading",state:"Pennsylvania"},
+  {title:"Automobile",status:"Exclude",category:"Other",state:"Pennsylvania"},
+  {title:"Affidavit",status:"Exclude",category:"Other",state:"Pennsylvania"},
+  {title:"Amend",status:"Exclude",category:"Other",state:"Pennsylvania"},
+  {title:"Notice",status:"Exclude",category:"Other",state:"Pennsylvania"},
+  {title:"Appeal",status:"Exclude",category:"Other",state:"Pennsylvania"},
+  {title:"Administrative",status:"Exclude",category:"Other",state:"Pennsylvania"},
+  {title:"Landlord Tenant",status:"Exclude",category:"Other",state:"Pennsylvania"},
+  {title:"Stay",status:"Exclude",category:"Other",state:"Pennsylvania"},
+
+  // Michigan
+  {title:"Opinion and Order",status:"Collect",category:"Order",state:"Michigan",note:"Include only when filed in a Michigan Circuit Court, any county."},
+  {title:"Opinion",status:"Collect",category:"Order",state:"Michigan",note:"Include only when filed in a Michigan Circuit Court, any county."},
+  {title:"Business Docket Court",status:"Exclude",category:"Other",state:"Michigan"},
+  {title:"Oakland Court",status:"Exclude",category:"Other",state:"Michigan"},
+  {title:"Claims",status:"Exclude",category:"Other",state:"Michigan"},
+  {title:"Court of Appeals",status:"Exclude",category:"Appellate",state:"Michigan"},
+
+  // Ohio
+  {title:"Pretrial Statement",status:"Collect",category:"Brief",state:"Ohio"},
+  {title:"Pretrial Response",status:"Collect",category:"Brief",state:"Ohio"},
+  {title:"Trial Brief",status:"Collect",category:"Brief",state:"Ohio"},
+  {title:"Motion for Temporary Restraining Order",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion Temporary Restraining",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion for Summary Judgment",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion Summary Judgment",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion for Default Judgment",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion Default Judgment",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion to Compel",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion to Vacate",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion to Vacate Judgment",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Reply Memorandum Contra Motion to Dismiss",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion to Dismiss",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion for Dismissal",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion Dismissal",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Response to Motion",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Reply or Response in Opposition to Motion",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Reply or Response in Support of Motion",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion for Protective Order",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion for Relief from Judgment",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion Relief Judgment",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion to Reactivate",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion to Intervene",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Motion to Disqualify",status:"Collect",category:"Motion",state:"Ohio"},
+  {title:"Order",status:"Collect",category:"Order",state:"Ohio"},
+  {title:"Order Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Use an Order title when the judgment is granted or signed by the judge."},
+  {title:"Order Agreed Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Agreed Entry",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Agreed Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Default Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Summary Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect as an Order when granted by the judge."},
+  {title:"Consent Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Order Dismissal",status:"Collect",category:"Order",state:"Ohio",note:"A granted dismissal may be titled as an Order."},
+  {title:"Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Vacate Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Relief from Judgment",status:"Collect",category:"Order",state:"Ohio",note:"Collect when granted or signed by the judge."},
+  {title:"Journal Entry",status:"Collect",category:"Order",state:"Ohio"},
+  {title:"Complaint",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Amended Complaint",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Answer",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Crossclaim and Counterclaim",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Crossclaim & Counterclaim",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Reply",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Verified Complaint",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Verified Petition",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Verified Complaint or Petition",status:"Collect",category:"Pleading",state:"Ohio"},
+  {title:"Automobile",status:"Exclude",category:"Other",state:"Ohio"},
+  {title:"Affidavit",status:"Exclude",category:"Other",state:"Ohio"},
+  {title:"Amend",status:"Exclude",category:"Other",state:"Ohio"},
+  {title:"Notice",status:"Exclude",category:"Other",state:"Ohio"},
+  {title:"Appeal",status:"Exclude",category:"Appellate",state:"Ohio"},
+  {title:"Stay",status:"Exclude",category:"Other",state:"Ohio"},
+  {title:"Stipulation",status:"Exclude",category:"Other",state:"Ohio"},
+  {title:"Replevin",status:"Exclude",category:"Other",state:"Ohio"}
+];
+
+function importedRules(){ try{return JSON.parse(localStorage.getItem('trialCourtImportedRules')||'[]')}catch{return []} }
+function allRules(){ return [...referenceRules]; }
+function ruleApplies(rule,state,county){
+  return (!rule.state || rule.state===state) && (!rule.county || normalize(rule.county)===normalize(county));
+}
+function formatRule(rule){
+  const statusText = String(rule.status || '').trim();
+  const normalizedStatus = normalize(statusText);
+  let decisionClass = 'decision-no';
+  let decision = 'DO NOT COLLECT';
+  let explanation = 'This document is not approved for collection under the reference guidance.';
+
+  if (normalizedStatus.includes('review')) {
+    decisionClass = 'decision-review';
+    decision = 'COLLECT / REVIEW REQUIRED';
+    explanation = 'This document may be collected, but the content, filing level, and jurisdiction should be reviewed before the final collection decision.';
+  } else if (normalizedStatus.startsWith('collect')) {
+    decisionClass = 'decision-collect';
+    decision = 'COLLECT';
+    explanation = 'This document is approved for collection when it is filed in the applicable trial court and matches the stated title and category.';
+  } else if (normalizedStatus.startsWith('exclude')) {
+    decision = 'EXCLUDE';
+    explanation = 'This document is specifically excluded from collection under the reference guidance.';
+  }
+
+  const jurisdiction = [rule.county ? `${rule.county} County` : '', rule.state || ''].filter(Boolean).join(', ') || 'General guidance; no state or county restriction stated';
+  const note = rule.note ? `<div class="rule-meta"><strong>Additional guidance:</strong> ${rule.note}</div>` : '';
+
+  return `<div class="rule-result">
+    <div class="rule-title">${rule.title}</div>
+    <div class="rule-row"><div class="rule-label">Collection Decision</div><div class="${decisionClass}">${decision}</div></div>
+    <div class="rule-row"><div class="rule-label">Document Category</div><div>${rule.category || 'Not specified'}</div></div>
+    <div class="rule-row"><div class="rule-label">Jurisdiction</div><div>${jurisdiction}</div></div>
+    <div class="rule-row"><div class="rule-label">Guidance</div><div>${explanation}</div></div>
+    ${note}
+  </div>`;
+}
+function rulesFor(record){
+  const applicable=allRules().filter(r=>ruleApplies(r,record.State,record.Court));
+  return {
+    include: applicable.filter(r=>/^collect/i.test(r.status)).map(formatRule),
+    exclude: applicable.filter(r=>/^(no|exclude)/i.test(r.status)).map(formatRule)
+  };
+}
+function parseImportedRules(raw){
+  const lines=raw.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  const out=[];
+  for(let i=0;i+2<lines.length;i+=3){
+    const title=lines[i], status=lines[i+1], category=lines[i+2];
+    if(!/^(collect(?:\s*\/\s*review)?|collect\s*-\s*review|no|exclude)$/i.test(status)) continue;
+    out.push({title,status:status.replace(/collect\s*-\s*review/i,'Collect/Review'),category});
+  }
+  return out;
+}
+const stateEl = document.getElementById('state');
+const courtEl = document.getElementById('court');
+const quickSearch = document.getElementById('quickSearch');
+
+function states() { return [...new Set(records.map(r=>r.State))].sort(); }
+function courts(state) { return records.filter(r=>!state || r.State===state).map(r=>r.Court).sort(); }
+function loadStates() {
+  stateEl.innerHTML = '<option value="">Select a state</option>' + states().map(s=>`<option value="${s}">${s}</option>`).join('');
+}
+function loadCourts(state) {
+  courtEl.innerHTML = '<option value="">Select a court</option>' + [...new Set(courts(state))].map(c=>`<option value="${c}">${c}</option>`).join('');
+}
+function listHTML(items) { return '<ul>' + items.map(x=>`<li>${x}</li>`).join('') + '</ul>'; }
+function normalize(text) {
+  return String(text || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+function findCountyFromSearch(text) {
+  const q = normalize(text);
+  if (!q) return null;
+  const selectedState = stateEl.value;
+  const pool = selectedState ? records.filter(r => r.State === selectedState) : records;
+
+  return pool.find(r => normalize(`${r.State} ${r.Court}`) === q)
+      || pool.find(r => normalize(`${r.Court} ${r.State}`) === q)
+      || pool.find(r => q.includes(normalize(r.State)) && q.includes(normalize(r.Court)))
+      || pool.find(r => normalize(r.Court) === q)
+      || pool.find(r => normalize(`${r.State} ${r.Court}`).includes(q))
+      || pool.find(r => normalize(r.Court).includes(q));
+}
+function titleMatchScore(query, title) {
+  const q = normalize(query);
+  const t = normalize(title);
+  if (!q || !t) return 0;
+  if (q === t) return 1000;
+  if (t.startsWith(q)) return 800 - Math.abs(t.length - q.length);
+  if (q.startsWith(t) && t.split(' ').length >= 2) return 700 - Math.abs(t.length - q.length);
+  if (t.includes(q)) return 600 - Math.abs(t.length - q.length);
+
+  const qWords = q.split(' ').filter(Boolean);
+  const tWords = new Set(t.split(' ').filter(Boolean));
+  const matchedWords = qWords.filter(word => tWords.has(word)).length;
+  if (matchedWords === qWords.length && qWords.length >= 2) return 400 + matchedWords;
+  return 0;
+}
+function findTitleMatches(text) {
+  const selectedState = stateEl.value;
+  const selectedCounty = courtEl.value;
+
+  const ranked = referenceRules
+    .filter(rule => {
+      if (selectedState && rule.state !== selectedState) return false;
+      if (selectedCounty && rule.county && normalize(rule.county) !== normalize(selectedCounty)) return false;
+      return true;
+    })
+    .map(rule => ({rule, score:titleMatchScore(text, rule.title)}))
+    .filter(item => item.score > 0)
+    .sort((a,b) => b.score - a.score || a.rule.title.localeCompare(b.rule.title));
+
+  if (!ranked.length) return null;
+
+  const bestScore = ranked[0].score;
+  const threshold = bestScore >= 1000 ? 1000 : Math.max(400, bestScore - 120);
+  const bestMatches = ranked.filter(item => item.score >= threshold).map(item => item.rule);
+
+  const unique = [];
+  const seen = new Set();
+  for (const rule of bestMatches) {
+    const key = [normalize(rule.title), rule.status, rule.category, rule.state].join('|');
+    if (!seen.has(key)) {
+      seen.add(key);
+      unique.push(rule);
+    }
+  }
+
+  const include = unique.filter(r=>/^collect/i.test(r.status)).map(formatRule);
+  const exclude = unique.filter(r=>/^(no|exclude)/i.test(r.status)).map(formatRule);
+  return include.length || exclude.length ? {include, exclude} : null;
+}
+function renderTitleSearch(query, matches) {
+  const selectedRecord = stateEl.value && courtEl.value
+    ? records.find(r => r.State === stateEl.value && r.Court === courtEl.value)
+    : null;
+  const selectedState = stateEl.value || 'All supported states';
+  document.getElementById('courtTitle').textContent = `Document Collection Result: ${query.trim()}`;
+  document.getElementById('stateLabel').textContent = selectedRecord
+    ? `${selectedRecord.Court} County, ${selectedRecord.State}`
+    : selectedState;
+  document.getElementById('included').innerHTML = matches.include.length
+    ? listHTML(matches.include)
+    : '<p>No matching document approved for collection was found for this title.</p>';
+  document.getElementById('excluded').innerHTML = matches.exclude.length
+    ? listHTML(matches.exclude)
+    : '<p>No matching document marked as not collect or excluded was found for this title.</p>';
+  document.getElementById('guidelines').innerHTML = listHTML([
+    'The document-title search checks the complete collection reference for matching titles and collection decisions.',
+    'State and county are optional. Choose them only when you need jurisdiction-specific guidance.',
+    'For the clearest result, enter the complete title or a distinctive part of the title, such as Motion to Compel, Preliminary Objection, Opinion and Order, Trial Brief, or Complaint.',
+    'Confirm the court level, document content, signature, filing information, and jurisdiction-specific restriction before making the final collection decision.'
+  ]);
+  ['included','excluded','guidelines'].forEach(id => document.getElementById(id).classList.remove('empty'));
+  document.getElementById('category').textContent = 'Document Collection Determination';
+}
+function renderRecord(record) {
+  if (!record) {
+    alert('Please select a state and court, or enter a valid state/court search.');
+    return;
+  }
+  const t = templates[record.State] || templates.default;
+  document.getElementById('courtTitle').textContent = record.Court + (/city|county/i.test(record.Court) ? '' : ' County');
+  const trialCourt = record.TrialCourt || ({'Pennsylvania':'Court of Common Pleas','Ohio':'Court of Common Pleas','Missouri':'Circuit Court','Texas':'District Court / County Court at Law','Michigan':'Circuit Court'}[record.State] || 'Trial Court');
+  document.getElementById('stateLabel').textContent = record.State + ' — ' + trialCourt;
+  const detailed = rulesFor(record);
+  document.getElementById('included').innerHTML = listHTML(detailed.include.length ? detailed.include : t.include);
+  document.getElementById('excluded').innerHTML = listHTML(detailed.exclude.length ? detailed.exclude : t.exclude);
+  document.getElementById('guidelines').innerHTML = listHTML(t.guidelines);
+  document.getElementById('included').classList.remove('empty');
+  document.getElementById('excluded').classList.remove('empty');
+  document.getElementById('guidelines').classList.remove('empty');
+  location.hash = encodeURIComponent(record.State) + '/' + encodeURIComponent(record.Court);
+}
+stateEl.addEventListener('change',()=>{ loadCourts(stateEl.value); courtEl.value=''; });
+document.getElementById('searchBtn').addEventListener('click',()=>{
+  const query = quickSearch.value.trim();
+  let record = null;
+
+  if (!query && stateEl.value && courtEl.value) {
+    record = records.find(r => r.State === stateEl.value && r.Court === courtEl.value);
+    renderRecord(record);
+    document.getElementById('category').textContent = 'Reference Guide';
+    return;
+  }
+
+  if (query) {
+    // Direct document search always runs first. No state or county selection is required.
+    const titleMatches = findTitleMatches(query);
+    if (titleMatches) {
+      renderTitleSearch(query, titleMatches);
+      return;
+    }
+
+    // County lookup remains available only as a fallback for users who type a county/state.
+    record = findCountyFromSearch(query);
+    if (record) {
+      stateEl.value = record.State;
+      loadCourts(record.State);
+      courtEl.value = record.Court;
+      renderRecord(record);
+      document.getElementById('category').textContent = 'County Guidance';
+      return;
+    }
+  }
+
+  alert('No matching document title was found. Try a title from the approved PA, MI, or OH lists, such as Complaint, Motion to Compel, Opinion and Order, Trial Brief, or Notice.');
+});
+quickSearch.addEventListener('keydown',e=>{ if(e.key==='Enter') document.getElementById('searchBtn').click(); });
+let liveSearchTimer;
+quickSearch.addEventListener('input',()=>{
+  clearTimeout(liveSearchTimer);
+  const value=quickSearch.value.trim();
+  if(value.length<3) return;
+  liveSearchTimer=setTimeout(()=>document.getElementById('searchBtn').click(),250);
+});
+document.getElementById('reset').addEventListener('click',()=>{
+  stateEl.value=''; courtEl.value=''; quickSearch.value=''; loadCourts('');
+  document.getElementById('courtTitle').textContent='Select a court';
+  document.getElementById('stateLabel').textContent='Choose a state and court, then click Search.';
+  document.getElementById('included').textContent='Search for a court to display possible included documents.';
+  document.getElementById('excluded').textContent='Search for a court to display possible excluded documents.';
+  document.getElementById('guidelines').textContent='Search for a court to display starter guidelines.';
+  document.getElementById('category').textContent='Reference Guide';
+  history.replaceState(null,'',location.pathname);
+});
+document.getElementById('copyLink').addEventListener('click',async()=>{
+  try { await navigator.clipboard.writeText(location.href); alert('Link copied.'); }
+  catch { prompt('Copy this link:', location.href); }
+});
+document.getElementById('importRules').addEventListener('click',()=>{
+  const parsed=parseImportedRules(document.getElementById('ruleImport').value);
+  if(!parsed.length){alert('No valid 3-line rows were found.');return;}
+  const merged=[...importedRules(),...parsed];
+  localStorage.setItem('trialCourtImportedRules',JSON.stringify(merged));
+  alert(`${parsed.length} reference rows imported.`);
+});
+document.getElementById('clearImported').addEventListener('click',()=>{localStorage.removeItem('trialCourtImportedRules');document.getElementById('ruleImport').value='';alert('Imported rows cleared.');});
+loadStates(); loadCourts('');
+if(location.hash.includes('/')) {
+  const [s,c] = location.hash.slice(1).split('/').map(decodeURIComponent);
+  const rec = records.find(r=>r.State===s && r.Court===c);
+  if(rec) { stateEl.value=s; loadCourts(s); courtEl.value=c; renderRecord(rec); }
+}
+</script>
+</body>
+</html>
