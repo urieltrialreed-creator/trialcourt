@@ -171,6 +171,7 @@ const templates = {
       "MOTION — Reply or Response in Opposition to Motion", "MOTION — Reply or Response in Support of Motion",
       "MOTION — Motion for Protective Order", "MOTION — Motion for Relief from Judgment",
       "MOTION — Motion to Reactivate", "MOTION — Motion to Intervene", "MOTION — Motion to Disqualify",
+      "PLEADING — Complaint",
       "ORDER — Opinion and Order — Include only when filed in a Michigan Circuit Court, any county.",
       "ORDER — Opinion — Include only when filed in a Michigan Circuit Court, any county."
     ],
@@ -329,6 +330,7 @@ const referenceRules = [
   {title:"Motion to Reactivate",status:"Collect",category:"Motion",state:"Michigan"},
   {title:"Motion to Intervene",status:"Collect",category:"Motion",state:"Michigan"},
   {title:"Motion to Disqualify",status:"Collect",category:"Motion",state:"Michigan"},
+  {title:"Complaint",status:"Collect",category:"Pleading",state:"Michigan"},
   {title:"Opinion and Order",status:"Collect",category:"Order",state:"Michigan",note:"Include only when filed in a Michigan Circuit Court, any county."},
   {title:"Opinion",status:"Collect",category:"Order",state:"Michigan",note:"Include only when filed in a Michigan Circuit Court, any county."},
   {title:"Business Docket Court",status:"Exclude",category:"Other",state:"Michigan"},
@@ -420,7 +422,7 @@ function formatRule(rule){
     explanation = 'This document is specifically excluded from collection under the reference guidance.';
   }
 
-  const jurisdiction = [rule.county ? `${rule.county} County` : '', rule.state || ''].filter(Boolean).join(', ') || 'General guidance; no state or county restriction stated';
+  const jurisdiction = rule.jurisdiction || [rule.county ? `${rule.county} County` : '', rule.state || ''].filter(Boolean).join(', ') || 'General guidance; no state or county restriction stated';
   const note = rule.note ? `<div class="rule-meta"><strong>Additional guidance:</strong> ${rule.note}</div>` : '';
 
   return `<div class="rule-result">
@@ -494,15 +496,11 @@ function titleMatchScore(query, title) {
   return 0;
 }
 function findTitleMatches(text) {
-  const selectedState = stateEl.value;
-  const selectedCounty = courtEl.value;
-
+  // Document-title searches intentionally check every supported state.
+  // This allows one result to show the complete jurisdiction, such as
+  // Ohio / Pennsylvania / Michigan, even when a state is selected above.
   const ranked = referenceRules
-    .filter(rule => {
-      if (selectedState && rule.state !== selectedState) return false;
-      if (selectedCounty && rule.county && normalize(rule.county) !== normalize(selectedCounty)) return false;
-      return true;
-    })
+    .filter(rule => true)
     .map(rule => ({rule, score:titleMatchScore(text, rule.title)}))
     .filter(item => item.score > 0)
     .sort((a,b) => b.score - a.score || a.rule.title.localeCompare(b.rule.title));
@@ -513,15 +511,38 @@ function findTitleMatches(text) {
   const threshold = bestScore >= 1000 ? 1000 : Math.max(400, bestScore - 120);
   const bestMatches = ranked.filter(item => item.score >= threshold).map(item => item.rule);
 
-  const unique = [];
-  const seen = new Set();
+  const grouped = new Map();
   for (const rule of bestMatches) {
-    const key = [normalize(rule.title), rule.status, rule.category, rule.state].join('|');
-    if (!seen.has(key)) {
-      seen.add(key);
-      unique.push(rule);
+    const key = [normalize(rule.title), normalize(rule.status), normalize(rule.category), normalize(rule.note || '')].join('|');
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        ...rule,
+        states: new Set(),
+        counties: new Set()
+      });
     }
+    const group = grouped.get(key);
+    if (rule.state) group.states.add(rule.state);
+    if (rule.county) group.counties.add(rule.county);
   }
+
+  const stateOrder = ['Ohio', 'Pennsylvania', 'Michigan'];
+  const unique = [...grouped.values()].map(group => {
+    const states = [...group.states].sort((a,b) => {
+      const ai = stateOrder.indexOf(a);
+      const bi = stateOrder.indexOf(b);
+      return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi) || a.localeCompare(b);
+    });
+    const counties = [...group.counties].sort();
+    let jurisdiction = states.join(' / ');
+    if (counties.length && states.length === 1) {
+      jurisdiction = counties.map(c => `${c} County`).join(' / ') + `, ${states[0]}`;
+    }
+    return {
+      ...group,
+      jurisdiction: jurisdiction || 'General guidance; no state or county restriction stated'
+    };
+  });
 
   const include = unique.filter(r=>/^collect/i.test(r.status)).map(formatRule);
   const exclude = unique.filter(r=>/^(no|exclude)/i.test(r.status)).map(formatRule);
@@ -531,11 +552,10 @@ function renderTitleSearch(query, matches) {
   const selectedRecord = stateEl.value && courtEl.value
     ? records.find(r => r.State === stateEl.value && r.Court === courtEl.value)
     : null;
-  const selectedState = stateEl.value || 'All supported states';
   document.getElementById('courtTitle').textContent = `Document Collection Result: ${query.trim()}`;
   document.getElementById('stateLabel').textContent = selectedRecord
-    ? `${selectedRecord.Court} County, ${selectedRecord.State}`
-    : selectedState;
+    ? `Cross-state title guidance; selected court: ${selectedRecord.Court} County, ${selectedRecord.State}`
+    : 'Cross-state title guidance for Ohio, Pennsylvania, and Michigan';
   document.getElementById('included').innerHTML = matches.include.length
     ? listHTML(matches.include)
     : '<p>No matching document approved for collection was found for this title.</p>';
