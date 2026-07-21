@@ -150,6 +150,7 @@ const templates = {
       "Use only the Pennsylvania include and exclude titles shown in this guide.",
       "Confirm that the document was filed in the selected Pennsylvania Court of Common Pleas.",
       "Classify the document as Brief, Motion, Order, or Pleading using the listed title guidance.",
+      "Additional statewide Pennsylvania titles are included, and York County-specific exceptions apply when York County is selected.",
       "Any title not listed should be reviewed before collection."
     ]
   },
@@ -396,6 +397,2502 @@ const referenceRules = [
   {title:"Stipulation",status:"Exclude",category:"Other",state:"Ohio"},
   {title:"Replevin",status:"Exclude",category:"Other",state:"Ohio"}
 ];
+
+
+// Additional statewide Pennsylvania rules
+referenceRules.push(...[
+  {
+    "title": "AmendedAnswer",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedAnswerAndNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedAnswerWithNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedComplaintEquity",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedComplaintQuietTitle",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedDecreeInDivorce",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedMotionForDefaultJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedMotionReturnProperty",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedMotionToVacateJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedOrderCustody",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedOrderForfeiture",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedPetitionForfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedQuietTitleComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedReplyToMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AmendedVerifiedComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "Answer",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerAffirmativeDefenses",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerAndNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerForeclosure",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerInOppositionContemptPetition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerInOppositionPetitionStrike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerInOppositionPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerInOppositionTransferVenue",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerNewMatterAndCounterclaims",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerNewMatterAndCrossclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerNewMatterAndCrossclaims",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerPetitionStrike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToAffirmativeDefenses",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToAmendedComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToComplaintNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToCounterclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToCrossclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToCrossclaims",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToCrossclaimsNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToEmergencyMotion",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToForfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToMotionCompel",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToMotionContemptSanctions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToMotionInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToMotionJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToMotionPartialJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToMotionReturnProperty",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToMotionSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToPetition",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToPetitionForfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToPetitionReturnProperty",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToPreliminaryObjections",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerToSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerVerifiedPetitionReturnProperty",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "AnswerWithNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionMotionJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionMotionsLimine",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionPartialJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionPreliminaryInjumction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionPreliminaryObjection",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInOppositionPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInReplySummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInResponsePreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportAppointmentReceiver",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportMotionCompel",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportMotionJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportMotionsLimine",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportPostTrial",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportPreliminaryObjection",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportOfOpposition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefInSupportOfResponse",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefOpposingPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefSupportingMotionJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "BriefSupportingPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "Complaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintConfessionJudgment",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintDeclaratoryJudgment",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintEjectment",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintInDivorce",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintInEquity",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintPartition",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintPaternity",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintPeremptoryJudgment",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintQuietTitle",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintToQuietTitle",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ComplaintWithNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ConsentPetitionFinalDecree",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "CustodyOrder",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "DecreeAndOrder",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "DecreeDivorce",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "DecreeInDivorce",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "DeclaratoryJudgment",
+    "status": "Collect",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "note": "Order if signed by Judge, Motion if not."
+  },
+  {
+    "title": "DivorceDecree",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "DomesticRelationsOrder",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "EmergencyMotionAppointmentReceiver",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "EmergencyMotionInjuctiveRelief",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "EmergencyMotionPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "EmergencyMotionSpecialRelief",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInOppositionMotionSanctions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInOppositionPetitionStrike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInOppositionPreliminaryInjumction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInOppositionPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInOppositionTransferVenue",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInSupportAppointmentReceiver",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInSupportCounterclaim",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInSupportFindingsLaw",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInSupportMotionJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInSupportPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInSupportReformMortgage",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemoInSupportSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemorandumOfLaw",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MemorandumOpinion",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionAppointmentOfReceiver",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionDefaultJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionEmergencyInjunctiveRelief",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionEmergencyPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionEntryDefaultJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForApprovalSettlement",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForContemptAndSanctions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForDefaultJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForDiscovery",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForFinalJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForForfeiture",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForImpoundment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForOrderForfeiture",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForPartialJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForPeremptoryJudgement",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForPeremptoryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForSanctions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionForSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionInLime",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionInLimine",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionOrderOfForfeiture",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionPostTrial",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionPostponeSherrifSale",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionPostponeSheriffSale",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionReturnProperty",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToCompel",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToCompelSettlement",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToDismiss",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToEnforceSettlement",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToPostponeSheriffSale",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToReleaseEscrow",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToStrike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToVacate",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToVacateForfeiture",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionToVacateJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MorionToReformMortgage",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "MotionsInLimine",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "NewMatterToCounterclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ObjectionMotionSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OppositionToMotionStrike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OppositionToPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderContemptSanctions",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderDecreeDivorce",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderDecreee",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderDefaultJudgment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderDismissal",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderEmergencySpecialRelief",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderForApprovalSettlement",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderForContempt",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderForfeiture",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderForInjunction",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderJudgment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderObjections",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderOfForfeiture",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderPostponseSheriffSale",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderPostponeSherrifSale",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderPostponeSheriffSale",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderPreliminaryObjections",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderQuietTitle",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderReliefEmergencyInjunction",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderReconsideration",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderSpecialRelief",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderStipulation",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderSummaryJudgment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderToCompel",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderToDismiss",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderToReleaseEscrowFunds",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderToStrike",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderToVacateJudgment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderVacateJudgment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "OrderVacatingJudgment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForApprovalSettlement",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForContempt",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForDetermination",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForEmergencyRelief",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForForfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForReviewPrivateComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionForfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionInForfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionPostponeSheriffSale",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionPreliminiaryObjection",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionReturnProperty",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionToReleaseEscrowFunds",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionToReleaseFunds",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionToStrike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PetitionToTransferVenue",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PreTrialMemorandum",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PreliminaryObjection",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "PreliminaryObjectionsToComplaint",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "QuietTitleComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "RepliesToNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefInOpposition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefInOppositionPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefInPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefInSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefInSupport",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefOfPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefMotionSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefSupportPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyBriefSupportingPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyMemoInTransferVenue",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyNewMatter",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToAffirmativeDefenses",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToAmendedNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToAnswerAmendedComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToAnswerCounterclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToAnswerNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToComplaintNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToCrossclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToMotionJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToPetitionIntervene",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToPetitionPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ReplyToPreliminaryObjections",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseInOppositionMotionDismiss",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseInOppositionMotionJugdment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseInOppositionMotionSanctions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseInOppositionMotionStrike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseInOppositionPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseOppositionMotionSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponsePetitionForPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponsePreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToAmendedComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToAnswerAmendedComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToAnswerNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToAnswerNewMattter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToMotionInLimine",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToMotionPreliminaryInjunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToMotionSpecialRelief",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToMotionSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToNewMatter",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToPetitionForfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToPetitionIntervene",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToPetitionTransferVenue",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToPreliminaryObjections",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponseToSummaryJudgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponsetoComplaintAndCounterclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "ResponsesToPreliminaryObjections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "TrialBrief",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "TrialMemorandum",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "VerifiedComplaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  },
+  {
+    "title": "VerifiedPetitionReturnProperty",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania"
+  }
+]);
+
+// York County-specific Pennsylvania rules
+referenceRules.push(...[
+  {
+    "title": "Charging Order",
+    "status": "Collect/Review",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Intervene",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion Judgment for Possession",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Motion Judgment for Possession",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Supplemental Response to Reply Brief",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Consent Motion to Strike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion for Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Emergency Petition for Special Relief",
+    "status": "Collect",
+    "category": "Pleading/Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion Partial Judgment on Pleadings",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Brief in Support Motion Partial Judgment on Pleadings",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer/Response to Preliminary Objections",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer To Preliminary Objections/ to Amended Complaint/Complaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Preliminary Objections to Complaint",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Petition for Forfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Brief in Response to Preliminary Objection",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Petition to Establish Title (same as Automobile)",
+    "status": "Exclude",
+    "category": "Pleading/Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion to Make Rule Absolute",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Joinder Complaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Issue Citations",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Waiver/Acceptance",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Scheduling",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Notice/Praecipe",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Release from Judgment",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Case Management Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Affidavit (Service/Good Faith) - Not NY",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Sensitive",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Retain",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Appeals Court",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Conference Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Show Cause",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Amend (any title with this term)",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Response of Statement of Facts",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Adjourn",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion Show Cause",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Original/Amended Answer/Complaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Memorandum of Law (ONLY)",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Partial Dismissal/Dismissal",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Petition",
+    "status": "Collect",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Service",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer In Opposition/In Support to Preliminary Objections",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Deferred Status Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Memorandum of Law in Support/In Opposition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Statement of Material Facts in Support/In Opposition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Reply In Support",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Compel Discovery (Responses)",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer Motion To Compel",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Petition Transfer Payment Rights",
+    "status": "Collect",
+    "category": "Pleading/Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer to Complaint/Crossclaim/Counterclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer (signed by Defendant only)",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Responses to Request for Admissions",
+    "status": "Exclude",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion for Disposition of Complaint",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Response to Petition Strike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer to Plaintiff's Motion for Sanctions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Any response to Request Document (Admissions, Production, etc.)",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Writ Habeas Corpus",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion Ex Parte/Custody/Attorney Fees",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Opposition To Motion To Stay",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Appropriate Relief (any Motion/Order)",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Denying Claim",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Additional Findings",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Juvenile Petition (Delinquent)",
+    "status": "Exclude",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Judicial Review (any Motion/Order)",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Dismiss",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Consent Motion To Strike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Any Document Related to Escrow Funds",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Response To Allegations",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Compelling Arbitration",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion Seizure of Property",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Compel Discovery Responses",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Complaint Ejectment",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Landlord/Tenant Complaint/Petitions (if filed by Attorney)",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Prohibiting From Filing Trespass Charges",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Reassess Damages (Motion/Order)",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer To Interrogatories",
+    "status": "Exclude",
+    "category": "Pleading",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer In Opposition/In Support (in any Motions)",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Judgment in Action Summary Ejectment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Consent Motion of Supersedeas",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion of Plaintiffs to Proceed Anonymously",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion Pretrial Conference",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Strike Judgment Nunc Pro Tunc And Reinstate Mortgage",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Sustaining",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Response To Motion For Preliminary Injunction",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Brief In Support/In Opposition Preliminary Objections",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Compel Responses/Answers To Supplemental Discovery Requests",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion For Removal Of Receiver and Memorandum With Proposed Suggestions To the Court For Appropriate Security With Supporting Arguments",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Procedural to Extension (example: Extension of Receivership)",
+    "status": "Exclude",
+    "category": "Not specified",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Memorandum Opinion (In Support/In Opposition) for Preliminary Objections",
+    "status": "Collect",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion in Limine Preclude",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Limit Testimony",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion to Preclude Certain Opinions of Expert",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion to Strike False Statements In Reply to Motion to Trifurcate",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Writ of Sequestration",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Administrative Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "License Suspension Appeal",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Petition for Appointment of Viewers",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Prompt Disposition of Matters/Cases/Termination of Inactive Cases",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Trial Memorandum",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Uncontested Motion To Take Judicial Notice Pursuant",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Leave to Amend/File Amended",
+    "status": "Exclude",
+    "category": "Pleading/Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion/Order For Leave to Reassess Damages",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion Directing Partition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Compel Answer to Interrogatories",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Reply Brief to Brief in Opposition/Support",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Adopt Stipulation/Approve Stipulation",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Set Aside Sheriff's Sale on Real Property",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Post Hearing Memorandum",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Reform Recorded Documents to Correct Legal Description",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Petition to Open/Strike Default Judgment",
+    "status": "Collect",
+    "category": "Pleading/Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion to Reconsider Denial of Petition to Open/Strike Default Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Pre-Trial Conference Memorandum",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Order Preliminary to Trial of Civil Case",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Cross Motion Summary Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer to Motion For Summary Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion To Deem Allegations of the Joinder Complaint",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion For Leave to File Joinder of Additional Defendant",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion to Compel Answers to Plaintiff's Interrogatories and Requests for Production of Documents in Aid of Execution Addressed to the Defendants",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Answer To Motion In Limine",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Reformation of Mortgage to Correct Legal Description",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Approve Stipulation of Counsel",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Response/Request for Admissions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Motion to Settle, Discontinue, and Dismiss as Moot",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "Pennsylvania",
+    "county": "York"
+  },
+  {
+    "title": "Emergency Petition to Certify Petition for Appeal",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "Pennsylvania",
+    "county": "York"
+  }
+]);
 
 function importedRules(){ try{return JSON.parse(localStorage.getItem('trialCourtImportedRules')||'[]')}catch{return []} }
 function allRules(){ return [...referenceRules]; }
