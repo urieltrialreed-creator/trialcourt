@@ -92,6 +92,7 @@ select:focus,input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(47,1
 
 <script>
 const records = [
+  {"Court":"NC Split","State":"NC Split","TrialCourt":"NC Split"},
   {"Court":"Van Buren","State":"Michigan","TrialCourt":"Circuit Court"},
   {"Court":"Jackson","State":"Michigan","TrialCourt":"Circuit Court"},
   {"Court":"Michigan County*","State":"Michigan","TrialCourt":"Circuit Court"},
@@ -213,6 +214,16 @@ const templates = {
       "Use only the Ohio include and exclude titles shown in this guide.",
       "For judgment documents granted or signed by the judge, use an Order title for uniform classification.",
       "Examples include Order Judgment, Order Agreed Judgment, and Order Dismissal.",
+      "Any title not listed should be reviewed before collection."
+    ]
+  }
+  ,"NC Split": {
+    "include": [],
+    "exclude": [],
+    "guidelines": [
+      "NC Split rules apply only when State is NC Split and Court / County is NC Split.",
+      "The displayed jurisdiction is NC Split.",
+      "Review titles marked COLLECT / REVIEW REQUIRED before final collection.",
       "Any title not listed should be reviewed before collection."
     ]
   }
@@ -2894,6 +2905,979 @@ referenceRules.push(...[
   }
 ]);
 
+
+// NC Split rules
+referenceRules.push(...[
+  {
+    "title": "Charging Order",
+    "status": "Collect/Review",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Intervene",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion Judgment for Possession",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Motion Judgment for Possession",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Supplemental Response to Reply Brief",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Consent Motion to Strike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion for Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Emergency Petition for Special Relief",
+    "status": "Collect",
+    "category": "Pleading/Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion Partial Judgment on Pleadings",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Brief in Support Motion Partial Judgment on Pleadings",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Petition for Forfeiture",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Petition to Establish Title",
+    "status": "Exclude",
+    "category": "Pleading/Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion to Make Rule Absolute",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Issue Citations",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Waiver/Acceptance",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Scheduling",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Notice/Praecipe",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Release from Judgment",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Case Management Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Affidavit (Service/Good Faith) - Not NY",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Sensitive",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Retain",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Appeals Court",
+    "status": "Exclude",
+    "category": "Appellate",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Conference Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Show Cause",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Amend (any title with this term)",
+    "status": "Exclude",
+    "category": "Other",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Response of Statement of Facts",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Adjourn",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion Show Cause",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Indictment",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Judgment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Original/Amended Answer/Complaint",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Memorandum of Law",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Partial Dismissal/Dismissal",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Petition",
+    "status": "Collect",
+    "category": "Not specified",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Service",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer In Opposition/In Support to Preliminary Objections",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Deferred Status Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Memorandum of Law in Support/In Opposition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Statement of Material Facts in Support/In Opposition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Reply In Support",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Compel Discovery Responses",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer Motion To Compel",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Petition Transfer Payment Rights",
+    "status": "Collect",
+    "category": "Pleading/Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer to Complaint/Crossclaim/Counterclaim",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer (signed by Defendant only)",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Responses to Request for Admissions",
+    "status": "Exclude",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion for Disposition of Complaint",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Response to Petition Strike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer to Plaintiff's Motion for Sanctions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Any Response to Request Document (Admissions, Production, etc.)",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Writ Habeas Corpus",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion Ex Parte/Custody/Attorney Fees",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Opposition To Motion To Stay",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Appropriate Relief (any Motion/Order)",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Denying Claim",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Additional Findings",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Juvenile Petition (Delinquent)",
+    "status": "Exclude",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Judicial Review (any Motion/Order)",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Dismiss",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Consent Motion To Strike",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Compelling Arbitration",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Landlord/Tenant Complaint/Petitions (if filed by Attorney)",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Prohibiting From Filing Trespass Charges",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer To Interrogatories",
+    "status": "Exclude",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer In Opposition/In Support (in any Motions)",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Judgment in Action Summary Ejectment",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion of Plaintiffs to Proceed Anonymously",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion Pretrial Conference",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Strike Judgment Nunc Pro Tunc And Reinstate Mortgage",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Sustaining",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Compel Responses/Answers To Supplemental Discovery Requests",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion For Removal Of Receiver and Memorandum With Proposed Suggestions To the Court For Appropriate Security With Supporting Arguments",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Procedural to Extension (example: Extension of Receivership)",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion in Limine Preclude",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Limit Testimony",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion to Preclude Certain Opinions of Expert",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion to Strike False Statements In Reply to Motion to Trifurcate",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Writ of Sequestration",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Administrative Order",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "License Suspension Appeal",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Petition for Appointment of Viewers",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Prompt Disposition of Matters/Cases/Termination of Inactive Cases",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Trial Memorandum",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Uncontested Motion To Take Judicial Notice Pursuant",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Leave to Amend/File Amended",
+    "status": "Exclude",
+    "category": "Pleading/Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion/Order For Leave to Reassess Damages",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion Directing Partition",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Compel Answer to Interrogatories",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Reply Brief to Brief in Opposition/Support",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Adopt Stipulation/Approve Stipulation",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Set Aside Sheriff's Sale on Real Property",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Post Hearing Memorandum",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Reform Recorded Documents to Correct Legal Description",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Petition to Open/Strike Default Judgment",
+    "status": "Collect",
+    "category": "Pleading/Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion to Reconsider Denial of Petition to Open/Strike Default Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Pre-Trial Conference Memorandum",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Preliminary to Trial of Civil Case",
+    "status": "Exclude",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Cross Motion Summary Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer to Motion For Summary Judgment",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Deem Allegations of the Joinder Complaint",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion For Leave to File Joinder of Additional Defendant",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion to Compel Answers to Plaintiff's Interrogatories and Requests for Production of Documents in Aid of Execution Addressed to the Defendants",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Answer To Motion In Limine",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Reformation of Mortgage to Correct Legal Description",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Approve Stipulation of Counsel",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Response/Request for Admissions",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion to Settle, Discontinue, and Dismiss as Moot",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Emergency Petition to Certify Petition for Appeal",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Judgment - Felony",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Complaint for Damages and Equitable Relief",
+    "status": "Collect",
+    "category": "Pleading",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Suppress",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Petitioner's Brief",
+    "status": "Collect",
+    "category": "Brief",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Request for Admissions/Production",
+    "status": "Exclude",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion for Protective Order",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Temporary/Permanent Child Custody",
+    "status": "Collect",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Application and Writ Habeas Corpus",
+    "status": "Exclude",
+    "category": "Motion/Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion Ex Parte Attorney Fees",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Opinion",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Motion To Preclude",
+    "status": "Collect",
+    "category": "Motion",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  },
+  {
+    "title": "Order Award and Attorney's Fees",
+    "status": "Collect",
+    "category": "Order",
+    "state": "NC Split",
+    "county": "NC Split",
+    "jurisdiction": "NC Split"
+  }
+]);
+
 function importedRules(){ try{return JSON.parse(localStorage.getItem('trialCourtImportedRules')||'[]')}catch{return []} }
 function allRules(){ return [...referenceRules]; }
 function ruleApplies(rule,state,county){
@@ -3023,7 +4007,7 @@ function findTitleMatches(text) {
     if (rule.county) group.counties.add(rule.county);
   }
 
-  const stateOrder = ['Ohio', 'Pennsylvania', 'Michigan'];
+  const stateOrder = ['Ohio', 'Pennsylvania', 'Michigan', 'NC Split'];
   const unique = [...grouped.values()].map(group => {
     const states = [...group.states].sort((a,b) => {
       const ai = stateOrder.indexOf(a);
