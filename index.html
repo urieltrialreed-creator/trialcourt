@@ -4043,12 +4043,37 @@ function renderTitleSearch(query, matches) {
   document.getElementById('excluded').innerHTML = matches.exclude.length
     ? listHTML(matches.exclude)
     : '<p>No matching document marked as not collect or excluded was found for this title.</p>';
-  document.getElementById('guidelines').innerHTML = listHTML([
+  const normalizedQuery = normalize(query);
+  const keyPoints = [];
+
+  if (normalizedQuery.includes('order')) {
+    keyPoints.push('<strong>Order</strong> – Every collected Order must be signed by the Judge or Magistrate. If there is no judicial signature, the document should be excluded.');
+  }
+  if (normalizedQuery.includes('preliminary objection')) {
+    keyPoints.push('<strong>Preliminary Objection</strong> – Collect and classify as a Motion.');
+  }
+  if (normalizedQuery.includes('order dismissal')) {
+    keyPoints.push('<strong>Order Dismissal</strong> – When the Judge grants the dismissal, the document is considered an Order.');
+  }
+  if (normalizedQuery.includes('journal entry') || normalizedQuery.includes('minute entry')) {
+    keyPoints.push('<strong>Journal Entry</strong> – A “Minute Entry” is a means by which the Judge’s official action is captured and then made part of the court record.');
+  }
+  if (normalizedQuery.includes('motion to compel')) {
+    keyPoints.push('<strong>Motion to Compel</strong> – It asks the court to compel the other side to act and contains law and argument, like all substantive motions. Motions to Compel are inherently substantive includes because a party is not doing what the other party believes it should do, requiring court involvement.');
+  }
+
+  const searchGuidelines = [
     'The document-title search checks the complete collection reference for matching titles and collection decisions.',
     'State and county are optional. Choose them only when you need jurisdiction-specific guidance.',
     'For the clearest result, enter the complete title or a distinctive part of the title, such as Motion to Compel, Preliminary Objection, Opinion and Order, Trial Brief, or Complaint.',
     'Confirm the court level, document content, signature, filing information, and jurisdiction-specific restriction before making the final collection decision.'
-  ]);
+  ];
+
+  if (keyPoints.length) {
+    searchGuidelines.push('<strong>Key Points</strong>', ...keyPoints);
+  }
+
+  document.getElementById('guidelines').innerHTML = listHTML(searchGuidelines);
   ['included','excluded','guidelines'].forEach(id => document.getElementById(id).classList.remove('empty'));
   document.getElementById('category').textContent = 'Document Collection Determination';
 }
