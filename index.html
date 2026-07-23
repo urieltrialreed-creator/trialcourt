@@ -4046,6 +4046,12 @@ function renderTitleSearch(query, matches) {
   const normalizedQuery = normalize(query);
   const keyPoints = [];
 
+  if (normalizedQuery.includes('complaint')) {
+    keyPoints.push('<strong>Complaint</strong> – A Complaint is generally the first document filed in the case and outlines what the case is about. It will often contain a court-stamped case number. Classify it as a Pleading.');
+  }
+  if (normalizedQuery.includes('motion')) {
+    keyPoints.push('<strong>Motion</strong> – There is no such thing as an “Opposition to a Complaint.” When you see an Opposition or Response to a Petition, classify it as a Motion rather than a Pleading.');
+  }
   if (normalizedQuery.includes('order')) {
     keyPoints.push('<strong>Order</strong> – Every collected Order must be signed by the Judge or Magistrate. If there is no judicial signature, the document should be excluded.');
   }
