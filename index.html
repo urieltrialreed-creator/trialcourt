@@ -4068,6 +4068,32 @@ function renderTitleSearch(query, matches) {
     keyPoints.push('<strong>Motion to Compel</strong> – It asks the court to compel the other side to act and contains law and argument, like all substantive motions. Motions to Compel are inherently substantive includes because a party is not doing what the other party believes it should do, requiring court involvement.');
   }
 
+  // Exact-title key points. These appear only when the full normalized title is searched.
+  if (normalizedQuery === 'response in opposition to preliminary objections') {
+    keyPoints.push('<strong>Response in Opposition to Preliminary Objections</strong> – Although preliminary objections often contain admitted recitations, classify this document as a Motion because it frequently, though not always, includes substantive legal arguments. It may be considered a hybrid document type, and similar treatment is used in other jurisdictions.');
+  }
+  if (normalizedQuery === 'answers or responses objections to motions' || normalizedQuery === 'answer or response objection to motion') {
+    keyPoints.push('<strong>Answers or Responses/Objections to Motions</strong> – Always classify these documents as Motions, regardless of whether they contain admissions or denials of factual allegations similar to those contained in an Answer to Complaint.');
+  }
+  if (normalizedQuery === 'motion for disposition of complaint') {
+    keyPoints.push('<strong>Motion for Disposition of Complaint</strong> – Include and classify this document as a Motion. Although primarily procedural, it asks the court to take specific action. Treating it as included helps maintain consistency and avoids excluding a potentially relevant document.');
+  }
+  if (normalizedQuery === 'response to petition strike') {
+    keyPoints.push('<strong>Response to Petition Strike</strong> – Classify this document as a Motion. Although both Motions and Pleadings may be titled as Petitions, classification depends on the document's purpose and substance rather than its title. This document functions as a Motion because it asks the court to take specific action.');
+  }
+  if (normalizedQuery === 'trial brief') {
+    keyPoints.push('<strong>Trial Brief</strong> – A trial brief is a formal statement presented to the court that explains a party's position and familiarizes the judge with relevant terminology, arguments, and other matters. A judge may also request briefing on particular issues to ensure the matter is fully understood and handled appropriately.');
+  }
+  if (normalizedQuery === 'petition to establish title' || normalizedQuery === 'petition to establish title same as automobile') {
+    keyPoints.push('<strong>Petition to Establish Title</strong> – Exclude. Treat this as the same type of document as an issuance of an automobile title, which is excluded from collection.');
+  }
+  if (normalizedQuery === 'responses to request for admissions' || normalizedQuery === 'responses to req for admissions') {
+    keyPoints.push('<strong>Responses to Request for Admissions</strong> – Exclude. These are discovery responses made to another party and do not ask the court to take action.');
+  }
+  if (normalizedQuery === 'motion to make rule absolute') {
+    keyPoints.push('<strong>Motion to Make Rule Absolute</strong> – Exclude. If granted, a default judgment would follow, which indicates that the motion is mainly procedural.');
+  }
+
   const searchGuidelines = [
     'The document-title search checks the complete collection reference for matching titles and collection decisions.',
     'State and county are optional. Choose them only when you need jurisdiction-specific guidance.',
