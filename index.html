@@ -410,73 +410,6 @@ const referenceRules = [
 ];
 
 
-// Global rules applicable to every supported state and county
-referenceRules.push(...[
-  {
-    title: "Response in Opposition to Preliminary Objections",
-    status: "Collect",
-    category: "Motion",
-    jurisdiction: "All supported states and counties",
-    note: "Although preliminary objections may contain admitted recitations, this document frequently includes substantive legal arguments. Treat it as a hybrid document and classify it as a Motion."
-  },
-  {
-    title: "Answers or Responses/Objections to Motions",
-    status: "Collect",
-    category: "Motion",
-    jurisdiction: "All supported states and counties",
-    note: "Always classify answers, responses, or objections to motions as Motions, even when they contain admissions or denials similar to an Answer to Complaint."
-  },
-  {
-    title: "Motion for Disposition of Complaint",
-    status: "Collect",
-    category: "Motion",
-    jurisdiction: "All supported states and counties",
-    note: "Include this document. Although primarily procedural, it asks the court to take specific action and should be treated as an included Motion."
-  },
-  {
-    title: "Response to Petition Strike",
-    status: "Collect",
-    category: "Motion",
-    jurisdiction: "All supported states and counties",
-    note: "Classification depends on purpose and substance rather than the word Petition. Because this document asks the court to take specific action, classify it as a Motion."
-  },
-  {
-    title: "Trial Brief",
-    status: "Collect",
-    category: "Brief",
-    jurisdiction: "All supported states and counties",
-    note: "A Trial Brief is a formal statement presented to the court explaining a party's position, terminology, arguments, and other matters. It may also be requested by the judge to assist in preparing for and handling the case."
-  },
-  {
-    title: "Petition to Establish Title",
-    status: "Exclude",
-    category: "Pleading/Motion",
-    jurisdiction: "All supported states and counties",
-    note: "Treat this as equivalent to issuance or establishment of an automobile title. Exclude it from collection."
-  },
-  {
-    title: "Responses to Request for Admissions",
-    status: "Exclude",
-    category: "Discovery",
-    jurisdiction: "All supported states and counties",
-    note: "Always exclude. These are discovery responses exchanged between parties and do not ask the court to take action."
-  },
-  {
-    title: "Responses to Req. for Admissions",
-    status: "Exclude",
-    category: "Discovery",
-    jurisdiction: "All supported states and counties",
-    note: "Always exclude. These are discovery responses exchanged between parties and do not ask the court to take action."
-  },
-  {
-    title: "Motion to Make Rule Absolute",
-    status: "Exclude",
-    category: "Motion",
-    jurisdiction: "All supported states and counties",
-    note: "Exclude this document because it is mainly procedural. If granted, a default judgment would ordinarily follow."
-  }
-]);
-
 // Additional statewide Pennsylvania rules
 referenceRules.push(...[
   {
@@ -4061,7 +3994,7 @@ function findTitleMatches(text) {
 
   const grouped = new Map();
   for (const rule of bestMatches) {
-    const key = [normalize(rule.title), normalize(rule.status), normalize(rule.category)].join('|');
+    const key = [normalize(rule.title), normalize(rule.status), normalize(rule.category), normalize(rule.note || '')].join('|');
     if (!grouped.has(key)) {
       grouped.set(key, {
         ...rule,
@@ -4082,8 +4015,8 @@ function findTitleMatches(text) {
       return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi) || a.localeCompare(b);
     });
     const counties = [...group.counties].sort();
-    let jurisdiction = group.jurisdiction || states.join(' / ');
-    if (!group.jurisdiction && counties.length && states.length === 1) {
+    let jurisdiction = states.join(' / ');
+    if (counties.length && states.length === 1) {
       jurisdiction = counties.map(c => `${c} County`).join(' / ') + `, ${states[0]}`;
     }
     return {
@@ -4113,43 +4046,26 @@ function renderTitleSearch(query, matches) {
   const normalizedQuery = normalize(query);
   const keyPoints = [];
 
-  // Exact-title key points. These display only when the complete matching title is searched.
-  const exactTitleKeyPoints = {
-    [normalize('Response in Opposition to Preliminary Objections')]: '<strong>Response in Opposition to Preliminary Objections</strong> – Although preliminary objections often contain admitted recitations, classify this document as a <strong>Motion</strong> because it frequently includes substantive legal arguments. It is a hybrid document type and receives similar treatment in other jurisdictions.',
-    [normalize('Answers or Responses/Objections to Motions')]: '<strong>Answers or Responses/Objections to Motions</strong> – Always classify these documents as <strong>Motions</strong>, regardless of whether they include admissions or denials similar to those in an Answer to Complaint.',
-    [normalize('Motion for Disposition of Complaint')]: '<strong>Motion for Disposition of Complaint</strong> – <strong>Include and classify as a Motion.</strong> Although primarily procedural, it requests that the court take specific action. Including it supports consistency and avoids excluding potentially relevant documents.',
-    [normalize('Response to Petition Strike')]: '<strong>Response to Petition Strike</strong> – <strong>Include and classify as a Motion.</strong> Classification depends on the document’s purpose and substance rather than the word Petition. This document functions as a Motion because it asks the court to take specific action.',
-    [normalize('Trial Brief')]: '<strong>Trial Brief</strong> – <strong>Include and classify as a Brief.</strong> A trial brief formally explains a party’s position, terminology, arguments, and other matters. A judge may also request briefing to ensure the court fully understands and is prepared to handle the case.',
-    [normalize('Petition to Establish Title')]: '<strong>Petition to Establish Title</strong> – <strong>Exclude.</strong> Treat this as equivalent to issuance or establishment of an automobile title.',
-    [normalize('Responses to Request for Admissions')]: '<strong>Responses to Request for Admissions</strong> – <strong>Always exclude.</strong> These are discovery responses exchanged between parties and do not ask the court to take action.',
-    [normalize('Responses to Req. for Admissions')]: '<strong>Responses to Req. for Admissions</strong> – <strong>Always exclude.</strong> These are discovery responses exchanged between parties and do not ask the court to take action.',
-    [normalize('Motion to Make Rule Absolute')]: '<strong>Motion to Make Rule Absolute</strong> – <strong>Exclude.</strong> This document is mainly procedural; if the court grants it, a default judgment would ordinarily follow.'
-  };
-
-  if (exactTitleKeyPoints[normalizedQuery]) {
-    keyPoints.push(exactTitleKeyPoints[normalizedQuery]);
-  } else {
-    if (normalizedQuery.includes('complaint')) {
-      keyPoints.push('<strong>Complaint</strong> – A Complaint is generally the first document filed in the case and outlines what the case is about. It will often contain a court-stamped case number. Classify it as a Pleading.');
-    }
-    if (normalizedQuery.includes('motion')) {
-      keyPoints.push('<strong>Motion</strong> – There is no such thing as an “Opposition to a Complaint.” When you see an Opposition or Response to a Petition, classify it as a Motion rather than a Pleading.');
-    }
-    if (normalizedQuery.includes('order')) {
-      keyPoints.push('<strong>Order</strong> – Every collected Order must be signed by the Judge or Magistrate. If there is no judicial signature, the document should be excluded.');
-    }
-    if (normalizedQuery.includes('preliminary objection')) {
-      keyPoints.push('<strong>Preliminary Objection</strong> – Collect and classify as a Motion.');
-    }
-    if (normalizedQuery.includes('order dismissal')) {
-      keyPoints.push('<strong>Order Dismissal</strong> – When the Judge grants the dismissal, the document is considered an Order.');
-    }
-    if (normalizedQuery.includes('journal entry') || normalizedQuery.includes('minute entry')) {
-      keyPoints.push('<strong>Journal Entry</strong> – A “Minute Entry” is a means by which the Judge’s official action is captured and then made part of the court record.');
-    }
-    if (normalizedQuery.includes('motion to compel')) {
-      keyPoints.push('<strong>Motion to Compel</strong> – It asks the court to compel the other side to act and contains law and argument, like all substantive motions. Motions to Compel are inherently substantive includes because a party is not doing what the other party believes it should do, requiring court involvement.');
-    }
+  if (normalizedQuery.includes('complaint')) {
+    keyPoints.push('<strong>Complaint</strong> – A Complaint is generally the first document filed in the case and outlines what the case is about. It will often contain a court-stamped case number. Classify it as a Pleading.');
+  }
+  if (normalizedQuery.includes('motion')) {
+    keyPoints.push('<strong>Motion</strong> – There is no such thing as an “Opposition to a Complaint.” When you see an Opposition or Response to a Petition, classify it as a Motion rather than a Pleading.');
+  }
+  if (normalizedQuery.includes('order')) {
+    keyPoints.push('<strong>Order</strong> – Every collected Order must be signed by the Judge or Magistrate. If there is no judicial signature, the document should be excluded.');
+  }
+  if (normalizedQuery.includes('preliminary objection')) {
+    keyPoints.push('<strong>Preliminary Objection</strong> – Collect and classify as a Motion.');
+  }
+  if (normalizedQuery.includes('order dismissal')) {
+    keyPoints.push('<strong>Order Dismissal</strong> – When the Judge grants the dismissal, the document is considered an Order.');
+  }
+  if (normalizedQuery.includes('journal entry') || normalizedQuery.includes('minute entry')) {
+    keyPoints.push('<strong>Journal Entry</strong> – A “Minute Entry” is a means by which the Judge’s official action is captured and then made part of the court record.');
+  }
+  if (normalizedQuery.includes('motion to compel')) {
+    keyPoints.push('<strong>Motion to Compel</strong> – It asks the court to compel the other side to act and contains law and argument, like all substantive motions. Motions to Compel are inherently substantive includes because a party is not doing what the other party believes it should do, requiring court involvement.');
   }
 
   const searchGuidelines = [
